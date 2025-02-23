@@ -2,7 +2,7 @@ const fs = require("fs");
 const { faker } = require("@faker-js/faker");
 
 const createFakeJson = async (fileName, size) => {
-  const writeStream = fs.createWriteStream(fileName, { highWaterMark: 16 * 1024 });
+  const writeStream = fs.createWriteStream(fileName);
 
   writeStream.write("[\n");
 
